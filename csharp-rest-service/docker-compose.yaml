@@ -1,0 +1,31 @@
+version: "3.9"
+
+networks:
+  dev:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local
+
+services:
+  postgres:
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_DB=development
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    networks:
+      - dev
+  application:
+    image: csharp-rest-service
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - '8080:8080'
+    networks:
+      - dev
