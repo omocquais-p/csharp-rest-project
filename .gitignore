@@ -1,0 +1,30 @@
+# build output
+csharp-rest-service/bin/
+csharp-rest-service/obj/
+csharp-rest-service/publish/
+
+csharp-rest-service.Tests/bin/
+csharp-rest-service.Tests/obj/
+csharp-rest-service.Tests/publish/
+
+# local tools
+csharp-rest-service/tools/
+csharp-rest-service.Tests/tools/
+
+# user-specific state
+csharp-rest-service/*.user
+csharp-rest-service.Tests/*.user
+
+# Visual Studio
+csharp-rest-service/.vs/
+csharp-rest-service.Tests/.vs/
+
+# Visual Studio Code
+csharp-rest-service/.vscode/
+csharp-rest-service.Tests/.vscode/
+
+# JetBrains Rider
+csharp-rest-service/.idea/
+csharp-rest-service.Tests/.idea/
+/.idea/
+*.iml
