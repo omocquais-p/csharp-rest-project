@@ -25,7 +25,8 @@ spec:
         steps:
           - name: test
             image: mcr.microsoft.com/dotnet/sdk:6.0
-            script: |-
+            script: |-               
               cd `mktemp -d`
               wget -qO- $(params.source-url) | tar xvz -m
+              ls -l
               dotnet test
